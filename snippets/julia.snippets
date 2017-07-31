@@ -5,6 +5,10 @@ snippet #- block comment
 	#-- ${1} --
 		${0}
 	#--/ ${1}
+snippet #= block comment
+	#=
+		${0}
+	=#
 # Functions
 snippet fun function definition
 	function ${1}(${2})
@@ -20,9 +24,8 @@ snippet prl print line
 # Includes
 snippet use load a package
 	using ${0}
-snippet incl include source code
-	include("${1}")
-	${0}
+snippet inc include source code
+	include("${1}")${0}
 # Loops
 snippet forc for loop iterating over iterable container
 	for ${1} in ${2}
@@ -35,7 +38,11 @@ snippet for standard for loop
 	for ${1} ∈ ${2}
 		${0}
 	end
-snippet fornest nested for loop
+snippet for= standard for loop
+	for ${1}=${2}
+		${0}
+	end
+snippet forn nested for loop
 	for ${1} = ${2}, ${3} = ${4}
 		${0}
 	end
